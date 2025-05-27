@@ -1,0 +1,21 @@
+
+{
+  "name": "Choose Her Fate Slot Machine",
+  "short_name": "Her Fate",
+  "start_url": "./Choose_Her_Fate_Ultimate_SlotMachine.html",
+  "display": "standalone",
+  "background_color": "#0e0e0e",
+  "theme_color": "#b22726",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192.png?text=Her+Fate",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512.png?text=Her+Fate",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Her Fate: Ultimate Slot Machine</title>
+  <style>
+    body { background-color: #0e0e0e; color: #f6f7f8; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 40px; }
+    h1 { font-size: 2.5em; margin-bottom: 10px; }
+    #slot-container { display: flex; justify-content: center; gap: 20px; margin: 30px 0; }
+    .slot { background: #292b2d; border: 2px solid #b22726; border-radius: 12px; padding: 30px; font-size: 1.3em; width: 200px; height: 140px; display: flex; align-items: center; justify-content: center; text-align: center; }
+    button { background: #b22726; color: white; border: none; padding: 15px 30px; font-size: 18px; border-radius: 10px; cursor: pointer; margin-top: 20px; }
+    button:hover { background: #d63c3c; }
+    #result { margin-top: 40px; font-size: 1.2em; max-width: 800px; margin-left: auto; margin-right: auto; }
+    #scene-image { margin-top: 30px; width: 80%; max-width: 600px; border-radius: 12px; box-shadow: 0 0 20px #b22726; }
+  </style>
+</head>
+<body>
+  <h1>Choose Her Fate: Ultimate Slot Machine</h1>
+  <div id="slot-container">
+    <div class="slot" id="slot1">...</div>
+    <div class="slot" id="slot2">...</div>
+    <div class="slot" id="slot3">...</div>
+  </div>
+  <button onclick="spinSlots()">Spin</button>
+  <div id="result"></div>
+  <img id="scene-image" src="https://via.placeholder.com/600x300?text=Scene" alt="Scene visual"/>
+
+  <script>
+    const reel1 = [
+      "She walks in wearing latex and a leash",
+      "She enters wet from the shower, dripping",
+      "She struts in with a paddle and a smirk",
+      "She kneels on the bed, already touching herself",
+      "She storms in and grabs your throat"
+    ];
+
+    const reel2 = [
+      "orders him to worship her feet and thighs",
+      "forces him to drink from her straight",
+      "makes him beg before letting him touch her",
+      "rides his face until he’s gasping for air",
+      "ties him up and squirts all over his chest",
+      "uses his mouth until she’s screaming, then slaps him with her wetness"
+    ];
+
+    const reel3 = [
+      "finishes by marking his face with cum and spit",
+      "sits on him and makes him feed her his own load",
+      "pisses down his throat while stroking herself",
+      "rides him to climax, then denies him release",
+      "makes him lick her clean while recording it",
+      "covers his chest in cum and makes him parade naked"
+    ];
+
+    const images = [
+      "https://via.placeholder.com/600x300?text=Latex+Domme",
+      "https://via.placeholder.com/600x300?text=Shower+Seduction",
+      "https://via.placeholder.com/600x300?text=Face+Ride",
+      "https://via.placeholder.com/600x300?text=Bondage+Scene",
+      "https://via.placeholder.com/600x300?text=Golden+Shower"
+    ];
+
+    function getRandom(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function spinSlots() {
+      const r1 = getRandom(reel1);
+      const r2 = getRandom(reel2);
+      const r3 = getRandom(reel3);
+      document.getElementById('slot1').innerText = r1;
+      document.getElementById('slot2').innerText = r2;
+      document.getElementById('slot3').innerText = r3;
+
+      const fullScene = `${r1}, ${r2}, ${r3}.`;
+      document.getElementById('result').innerHTML = `<p><strong>Scene:</strong> ${fullScene}</p>`;
+      document.getElementById('scene-image').src = getRandom(images);
+    }
+  </script>
+</body>
+</html>
